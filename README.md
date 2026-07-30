@@ -42,9 +42,12 @@ o navegador bloqueia o Web Worker necessário para executar o FFmpeg.
 
 1. Crie um repositório novo no GitHub.
 2. Envie o conteúdo desta pasta para a raiz do repositório.
-3. Em **Settings → Pages**, escolha **GitHub Actions** como fonte.
-4. Faça push na branch `main`.
-5. O workflow em `.github/workflows/pages.yml` compila e publica a pasta `public`.
+3. Execute `npm run build` antes de enviar, para atualizar a pasta `build`.
+4. Em **Settings → Pages**, escolha **Deploy from a branch**.
+5. Selecione a branch `main`, a pasta `/(root)` e clique em **Save**.
+
+O GitHub Pages encontra `index.html` diretamente na raiz. A pasta `public` contém
+apenas arquivos-fonte auxiliares; ela não é a pasta configurada para publicação.
 
 O primeiro uso baixa o modelo escolhido. Os encoders maiores podem ultrapassar 100 MB e por isso ficam hospedados externamente, como no projeto técnico de referência.
 
